@@ -32,7 +32,7 @@ def list_files_in_directory(
     if not directory.is_dir():
         raise TypeError(f"It seems that {directory} is not a directory.")
 
-    return glob.glob(f"{directory}/*{extension}")
+    return sorted(glob.glob(f"{directory}/*{extension}"))
 
 
 def export_airfoil_data(
