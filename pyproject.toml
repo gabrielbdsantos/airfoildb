@@ -1,16 +1,23 @@
 [tool.poetry]
-name = "airfoil-database"
-version = "0.0.1"
+name = "airfoildb"
+version = "0.1.0"
 description = "Consistent B-spline representation for the UIUC airfoil database."
 authors = ["Gabriel B. Santos <9348147+gabrielbdsantos@users.noreply.github.com>"]
 license = "MIT"
+packages = [
+  { include = "airfoildb" },
+]
+
+[tool.poetry.scripts]
+airfoildb = 'airfoildb.cli:app'
 
 [tool.poetry.dependencies]
 python = ">=3.8,<3.11"
-bs4 = "^0.0.1"
-requests = "^2.26.0"
+beautifulsoup4 = "^4.11"
+requests = "^2.26"
 scipy = "^1.7"
 numpy = "^1.21"
+typer = "^0.7.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
