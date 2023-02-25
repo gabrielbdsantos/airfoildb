@@ -2,7 +2,7 @@
 name = "airfoildb"
 version = "0.1.0"
 description = "Consistent B-spline representation for the UIUC airfoil database."
-authors = ["Gabriel B. Santos <9348147+gabrielbdsantos@users.noreply.github.com>"]
+authors = ["Gabriel B. Santos <gabriel.bertacco@unesp.br>"]
 license = "MIT"
 packages = [
   { include = "airfoildb" },
