@@ -1,7 +1,6 @@
 # coding: utf-8
 """Define functions to scrap airfoil coordinates from the UIUC website."""
 
-import pathlib
 import re
 import urllib.parse
 

@@ -1,5 +1,5 @@
 # coding: utf-8
-"""Provide I/O functionalities."""
+"""Define I/O functionalities."""
 
 import glob
 import pathlib

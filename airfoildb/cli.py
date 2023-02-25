@@ -1,5 +1,5 @@
 # coding: utf-8
-"""Command line interface for the airfoil-database."""
+"""Provide a simple command line interface."""
 
 import functools
 import multiprocessing
@@ -53,7 +53,7 @@ def uniformize(
         default=False, help="Overwrite existing files."
     ),
 ):
-    """Uniformize the coordinates accross the database using B-splines."""
+    """Uniformize the 2D airfoil coordinates using B-splines."""
     # Create the output directory if it already does not exist.
     output.mkdir(parents=True, exist_ok=True)
 
@@ -61,9 +61,9 @@ def uniformize(
         # For some reason, scipy.interpolate.splprep cannot approximate some
         # airfoil coordinates to a B-spline, which causes the routine to throw
         # a ValueError.
+        #
         # So far, I could not find what causes such behavior. As the error only
-        # affects 3 airfoils, a try-except is completely acceptable as a
-        # workaround.
+        # affects 3 airfoils, a try-except is acceptable as a workaround.
         try:
             export_as_bspline(
                 file=file,

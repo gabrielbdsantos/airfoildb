@@ -1,5 +1,5 @@
 # coding: utf-8
-"""Provide functions to uniformize spline representation."""
+"""Define functions related to spline representation."""
 
 import numpy as np
 import scipy.integrate
