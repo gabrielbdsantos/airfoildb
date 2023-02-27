@@ -2,36 +2,53 @@
 
 A simple script for creating a consistent airfoil database.
 
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![Imports: isort](https://img.shields.io/badge/%20imports-isort-%231674b1?style=flat&labelColor=ef8336)](https://pycqa.github.io/isort/)
+[![black](https://github.com/gabrielbdsantos/airfoildb/actions/workflows/black.yaml/badge.svg?branch=master&event=push)](https://github.com/gabrielbdsantos/airfoildb/actions/workflows/black.yaml)
 
 ## Instalation
 
-It is recommended to use [Poetry](https://python-poetry.org).
+### Poetry
 
-  ```bash
-  poetry install git+https://github.com/gabrielbdsantos/airfoildb
-  ```
+1. Clone the repository
 
-or
+       git clone https://github.com/gabrielbdsantos/airfoildb
+       cd airfoildb
 
-  ```bash
-  git clone https://github.com/gabrielbdsantos/airfoildb
-  cd airfoildb
-  poetry install
-  ```
+2. Create a dedicated virtual environment (optional)
+
+       poetry env use python3
+
+3. Install it
+
+       poetry install
+
+### Pip
+
+1. Clone the repository
+
+       git clone https://github.com/gabrielbdsantos/airfoildb
+       cd airfoildb
+
+2. Create a dedicated virtual environment (optional)
+
+       python3 -m venv .venv --clear
+       source .venv/bin/activate
+
+3. Install it
+
+       pip install -r requirements.txt -e .
+
 
 ## Quick start
 
   1. Download the airfoils from the UIUC website.
 
-     ```bash
-     airfoildb download --output airfoildb/raw
-     ```
+         airfoildb download --output airfoildb/raw
 
   2. Uniformize the airfoils across the entire database.
 
-     ```bash
-     airfoildb uniformize --database airfoildb/raw --output airfoildb/uniform
-     ```
+         airfoildb uniformize --database airfoildb/raw --output airfoildb/uniform
 
 ## License
 
