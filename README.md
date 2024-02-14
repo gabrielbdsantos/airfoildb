@@ -6,38 +6,34 @@ A simple script for creating a consistent airfoil database.
 [![Imports: isort](https://img.shields.io/badge/%20imports-isort-%231674b1?style=flat&labelColor=ef8336)](https://pycqa.github.io/isort/)
 [![black](https://github.com/gabrielbdsantos/airfoildb/actions/workflows/black.yml/badge.svg?branch=master)](https://github.com/gabrielbdsantos/airfoildb/actions/workflows/black.yml)
 
-## Instalation
+## Installation
 
-### Poetry
+### Rye
 
 1. Clone the repository
 
        git clone https://github.com/gabrielbdsantos/airfoildb
        cd airfoildb
 
-2. Create a dedicated virtual environment (optional)
+2. Sync the requirements and install it.
 
-       poetry env use python3
-
-3. Install it
-
-       poetry install
+       rye sync
 
 ### Pip
 
-1. Clone the repository
+1. Clone the repository.
 
        git clone https://github.com/gabrielbdsantos/airfoildb
        cd airfoildb
 
-2. Create a dedicated virtual environment (optional)
+2. Create a dedicated virtual environment (optional).
 
        python3 -m venv .venv --clear
        source .venv/bin/activate
 
-3. Install it
+3. Install it.
 
-       pip install -r requirements.txt -e .
+       pip install -r requirements.lock
 
 
 ## Quick start
