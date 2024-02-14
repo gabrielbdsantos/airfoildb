@@ -15,7 +15,11 @@ A simple script for creating a consistent airfoil database.
        git clone https://github.com/gabrielbdsantos/airfoildb
        cd airfoildb
 
-2. Sync the requirements and install it.
+2. (Optional) Pin a python version
+
+       rye pin 3.x
+
+3. Sync the requirements and install it.
 
        rye sync
 

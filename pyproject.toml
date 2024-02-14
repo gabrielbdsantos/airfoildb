@@ -1,9 +1,9 @@
 [project]
 name = "airfoildb"
 version = "0.1.0"
-description = "Add your description here"
+description = "Consistent B-spline representation for the UIUC airfoil database."
 authors = [
-    { name = "Gabriel B. Santos", email = "9348147+gabrielbdsantos@users.noreply.github.com" }
+    { name = "Gabriel B. Santos", email = "gabriel.bertacco@unesp.br" }
 ]
 dependencies = [
     "beautifulsoup4==4.11.1 ; python_version >= '3.8' and python_version < '3.11'",
@@ -19,6 +19,7 @@ dependencies = [
     "typer==0.7.0 ; python_version >= '3.8' and python_version < '3.11'",
     "urllib3==1.26.13 ; python_version >= '3.8' and python_version < '3.11'",
 ]
+license = "MIT"
 readme = "README.md"
 requires-python = ">= 3.8"
 
@@ -38,3 +39,6 @@ allow-direct-references = true
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/airfoildb"]
+
+[tool.black]
+line-length = 79
