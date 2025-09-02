@@ -44,10 +44,11 @@ def read_airfoil_data(
     page = get_url_content(url)
     page_content = page.decode().splitlines()
 
-    return np.asfarray(
+    return np.asarray(
         [
             match.groups()
             for line in page_content
             if (match := pattern.match(line))
-        ]
+        ],
+        dtype=np.float32,
     )

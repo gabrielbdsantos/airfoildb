@@ -55,7 +55,7 @@ def curvature_based_bspline(
     curv = np.abs(ddx * dy - dx * ddy) / (dx * dx + dy * dy) ** 1.5 + smoother
 
     # Calculate the curvature cumulative integral.
-    curv_int = scipy.integrate.cumtrapz(curv, uu, initial=0.0)
+    curv_int = scipy.integrate.cumulative_trapezoid(curv, uu, initial=0.0)
 
     # Sample the curvature cumulative integral with N points.
     curv_int_sample = np.linspace(0, curv_int.max(), npoints)

@@ -54,10 +54,8 @@ def export_as_bspline(
     file: str,
     output_dir: pathlib.Path,
     func: Callable[[NDArray], NDArray] = curvature_based_bspline,
-    rename_fn: Callable[
-        [pathlib.Path, str], pathlib.Path
-    ] = lambda out, file: out
-    / f"uniform_{file.split('/')[-1]}",
+    rename_fn: Callable[[pathlib.Path, str], pathlib.Path] = lambda out,
+    file: out / f"uniform_{file.split('/')[-1]}",
     force: bool = False,
 ) -> None:
     """Convert the airfoil to a curvature-based B-spline representation.

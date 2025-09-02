@@ -5,18 +5,18 @@ description = "Consistent B-spline representation for the UIUC airfoil database.
 authors = [
     { name = "Gabriel B. Santos", email = "gabriel.bertacco@unesp.br" }
 ]
-dependencies = [
-    "typer>=0.7",
-    "numpy>=1.24.0",
-    "scipy>=1.9.3",
-    "requests>=2.31.0",
-    "beautifulsoup4>=4.12.3",
-]
 license = "MIT"
 readme = "README.md"
-requires-python = ">= 3.8"
+requires-python = ">=3.10"
+dependencies = [
+    "beautifulsoup4>=4.12.3",
+    "numpy>2",
+    "requests>=2.31.0",
+    "scipy>=1.14",
+    "typer>=0.7",
+]
 packages = [
-  {include = "airfoildb"}
+  { include = "airfoildb" }
 ]
 
 [project.scripts]
@@ -26,15 +26,11 @@ airfoildb = 'airfoildb.cli:app'
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 
-[tool.rye]
-managed = false
-dev-dependencies = []
-
 [tool.hatch.metadata]
 allow-direct-references = true
 
 [tool.hatch.build.targets.wheel]
 packages = ["airfoildb"]
 
-[tool.black]
+[tool.ruff]
 line-length = 79
