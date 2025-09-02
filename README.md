@@ -18,7 +18,7 @@ A simple script for creating a consistent airfoil database.
 
 3. Install it.
 
-       pip install -r requirements.lock
+       pip install .
 
 
 ## Quick start
